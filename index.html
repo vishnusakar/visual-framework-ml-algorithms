@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine Learning Algorithms at a Glance</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+body{margin:0;background:#07040F}
+*{box-sizing:border-box}
+.page{width:100%;max-width:1200px;margin:0 auto;padding:56px;background:#07040F;font-family:'DM Sans',Arial,sans-serif;display:flex;flex-direction:column;gap:32px}
+.card{background:#15102A;border:1px solid #3B2D78;border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:10px;box-shadow:0 0 28px rgba(168,85,247,.18)}
+.ct{border-top:6px solid #A855F7}.cc{border-top:6px solid #818CF8}.cn{border-top:6px solid #E879F9}.cg{border-top:6px solid #C4B5FD}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.name{font-size:20px;font-weight:700;color:#fff;line-height:1.2}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.sup{background:#EDE9FE;color:#07040F}
+.uns{background:transparent;color:#EDE9FE;border:2px solid #EDE9FE}
+.tab{background:#A855F7;color:#07040F}.cv{background:#818CF8;color:#07040F}.nlp{background:#E879F9;color:#07040F}.gen{background:#C4B5FD;color:#07040F}
+.card p{margin:0;font-size:15px;line-height:1.45;color:#D9D2F5}
+.card b{color:#fff}
+.sec{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px;border-radius:12px;color:#07040F}
+.st{font-size:22px;font-weight:700}.ss{font-size:15px;font-weight:500}
+.pill{background:#07040F;border:1px solid #6D4FD6;border-radius:8px;padding:6px 10px;font-size:14px;font-weight:500;color:#EDE9FE}
+.cell{border-radius:10px;padding:12px;display:flex;gap:8px;flex-wrap:wrap;align-content:flex-start;min-height:70px;background:#15102A;border:1px solid #3B2D78}
+.lab{background:linear-gradient(135deg,#6D28D9,#C026D3);color:#fff;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.hd{border-radius:10px;padding:10px;text-align:center;font-weight:700;font-size:16px;color:#07040F}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.blk{display:flex;flex-direction:column;gap:14px;overflow-x:auto}
+.matrix{display:grid;grid-template-columns:150px 1fr 1fr 1fr 1fr;gap:10px}
+.chs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ch{background:#15102A;border:1px solid #3B2D78;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.45;color:#D9D2F5}
+.ch b{color:#fff;font-size:17px}
+.h2{margin:0;font-size:26px;font-weight:700;color:#fff}
+.banner{background:linear-gradient(120deg,#6D28D9,#C026D3);border-radius:20px;padding:36px 40px;display:flex;flex-direction:column;gap:10px;box-shadow:0 0 48px rgba(192,38,211,.35)}
+.banner h1{margin:0;font-size:50px;line-height:1.05;color:#fff}
+@media(max-width:900px){.g3,.g2{grid-template-columns:1fr}.chs{grid-template-columns:1fr 1fr}.matrix{min-width:760px}.page{padding:24px}.banner h1{font-size:34px}.sec{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="banner"><h1>Machine Learning Algorithms at a Glance</h1><div style="font-size:19px;color:#F3E8FF">Ten key algorithms organized by learning style and application domain</div><div style="font-size:22px;font-weight:700;color:#fff;margin-top:6px">Vishnu Sakar Baskar, MS. CIS (AI), IWU</div></div>
+<div class="blk"><h2 class="h2">The big picture</h2><div class="matrix">
+<div></div><div class="hd tab">Tabular Data</div><div class="hd cv">Computer Vision</div><div class="hd nlp">NLP</div><div class="hd gen">Generative AI</div>
+<div class="lab"><b style="font-size:18px">Supervised</b><span style="font-size:13px">Learns from labeled examples</span></div>
+<div class="cell"><span class="pill">Linear Regression</span><span class="pill">Decision Tree</span><span class="pill">Random Forest</span><span class="pill">Gradient Boosting</span></div><div class="cell"><span class="pill">CNN</span></div><div class="cell"><span class="pill">Transformer</span></div><div class="cell"><span class="pill">Transformer (GPT)</span></div>
+<div class="lab"><b style="font-size:18px">Unsupervised</b><span style="font-size:13px">Finds patterns without labels</span></div>
+<div class="cell"><span class="pill">K-Means</span><span class="pill">PCA</span></div><div class="cell"><span class="pill">PCA</span></div><div class="cell"><span style="color:#E879F9;font-size:14px">No algorithm in this set</span></div><div class="cell"><span class="pill">GAN</span><span class="pill">Diffusion</span></div>
+</div></div>
+<div class="blk"><div class="sec tab"><span class="st">Tabular Data</span><span class="ss">Structured rows and columns, like spreadsheets and databases</span></div><div class="g3"><div class="card ct"><div class="top"><span class="name">Linear Regression</span><span class="chip sup">Supervised</span></div><p><b>How it works:</b> Fits a straight line through labeled data points and uses it to predict a number.</p><p><b>Use case:</b> Forecasting house prices from size and location, or predicting monthly sales.</p><p><b>Key strength:</b> Simple, fast, and easy to explain to non-technical teams.</p></div><div class="card ct"><div class="top"><span class="name">Decision Tree</span><span class="chip sup">Supervised</span></div><p><b>How it works:</b> Splits data with a chain of yes/no questions until it reaches a prediction.</p><p><b>Use case:</b> Approving or declining loan applications based on income and credit history.</p><p><b>Key strength:</b> Reads like a flowchart, so every decision can be explained.</p></div><div class="card ct"><div class="top"><span class="name">Random Forest</span><span class="chip sup">Supervised</span></div><p><b>How it works:</b> Trains many decision trees on random samples of the data and lets them vote.</p><p><b>Use case:</b> Detecting fraudulent card transactions and predicting customer behavior.</p><p><b>Key strength:</b> More accurate and stable than a single tree, and resists overfitting.</p></div><div class="card ct"><div class="top"><span class="name">Gradient Boosting</span><span class="chip sup">Supervised</span></div><p><b>How it works:</b> Builds trees one after another, with each new tree fixing the previous tree's mistakes.</p><p><b>Use case:</b> Credit risk scoring, customer churn prediction, and ranking search results.</p><p><b>Key strength:</b> Often the top performer on structured business data.</p></div><div class="card ct"><div class="top"><span class="name">K-Means Clustering</span><span class="chip uns">Unsupervised</span></div><p><b>How it works:</b> Groups unlabeled points around a chosen number of center points, adjusting until stable.</p><p><b>Use case:</b> Segmenting customers by buying behavior for targeted marketing.</p><p><b>Key strength:</b> Finds hidden groups without needing any labels.</p></div><div class="card ct"><div class="top"><span class="name">PCA</span><span class="chip uns">Unsupervised</span></div><div class="row"><span class="chip tab">Tabular</span><span class="chip cv">Vision</span></div><p><b>How it works:</b> Compresses many features into a few new ones that keep most of the variation.</p><p><b>Use case:</b> Reducing noise, speeding up models, and visualizing complex data in 2D.</p><p><b>Key strength:</b> Simplifies large datasets while keeping the important patterns.</p></div></div></div>
+<div class="blk"><div class="sec cv"><span class="st">Computer Vision and NLP</span><span class="ss">Deep learning for images and for language</span></div><div class="g2"><div class="card cc"><div class="top"><span class="name">Convolutional Neural Network</span><span class="chip sup">Supervised</span></div><div class="row"><span class="chip cv">Computer Vision</span></div><p><b>How it works:</b> Slides small filters over an image to detect edges, then shapes, then whole objects.</p><p><b>Use case:</b> Spotting tumors in X-rays, reading license plates, and detecting objects in photos.</p><p><b>Key strength:</b> Learns visual features on its own, with no hand-built rules.</p></div><div class="card cn"><div class="top"><span class="name">Transformer (BERT, GPT)</span><span class="chip sup">Supervised</span></div><div class="row"><span class="chip nlp">NLP</span><span class="chip gen">Generative AI</span></div><p><b>How it works:</b> Uses attention to weigh how every word relates to every other word, learning from the text itself.</p><p><b>Use case:</b> Sentiment analysis, chatbots, translation, and text generation.</p><p><b>Key strength:</b> Understands context across long passages and powers modern GPT models.</p></div></div></div>
+<div class="blk"><div class="sec gen"><span class="st">Generative AI</span><span class="ss">Models that create new images, text, and more</span></div><div class="g2"><div class="card cg"><div class="top"><span class="name">Generative Adversarial Network</span><span class="chip uns">Unsupervised</span></div><div class="row"><span class="chip gen">Generative AI</span><span class="chip cv">Computer Vision</span></div><p><b>How it works:</b> A generator creates fakes while a discriminator tries to spot them, until the fakes look real.</p><p><b>Use case:</b> Creating realistic faces, enhancing photos, and making synthetic training images.</p><p><b>Key strength:</b> Produces sharp, realistic images without needing labeled data.</p></div><div class="card cg"><div class="top"><span class="name">Diffusion Model</span><span class="chip uns">Unsupervised</span></div><div class="row"><span class="chip gen">Generative AI</span><span class="chip cv">Computer Vision</span></div><p><b>How it works:</b> Learns to remove noise step by step, then builds a brand-new image starting from pure noise.</p><p><b>Use case:</b> Text-to-image tools such as Stable Diffusion for art, design, and marketing.</p><p><b>Key strength:</b> Creates detailed, high-quality images that follow a text prompt closely.</p></div></div></div>
+<div class="blk"><h2 class="h2">How to choose</h2><div class="chs">
+<div class="ch"><b>Spreadsheet-style data</b>Start with Random Forest or Gradient Boosting, which handle mixed columns well. Use Linear Regression or a Decision Tree as a simple, explainable baseline.</div>
+<div class="ch"><b>Images</b>Use a CNN to classify pictures or detect objects, since it learns visual patterns on its own. Apply PCA first if the image data is very large.</div>
+<div class="ch"><b>Text</b>Use a Transformer to capture meaning and context in language. It suits sentiment analysis, search, and chatbots, and pretrained models save time and data.</div>
+<div class="ch"><b>New content</b>Use a GAN or Diffusion model to generate images, and a Transformer like GPT to generate text. Check outputs carefully for quality and bias.</div>
+</div></div>
+</div>
+</body>
+</html>
